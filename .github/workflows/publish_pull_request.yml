@@ -40,8 +40,7 @@ jobs:
       - name: Publish to Expo Go
         run: NODE_ENV=dev expo publish --non-interactive --release-channel pr-${{ github.event.number }}
 
-      - name: Publish to Expo Go
-        run: NODE_ENV=dev expo publish --non-interactive --release-channel pr-${{ github.event.number }}
+    
 
 
       - name: Add Expo Link to PR
