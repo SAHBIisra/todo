@@ -31,8 +31,12 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
+      - name: Install Expo Updates
+        run: yarn add expo-updates
+
       - name: Publish to Expo Go
         run: NODE_ENV=dev expo publish --non-interactive --release-channel pr-${{ github.event.number }}
+
 
       - name: Add Expo Link to PR
         uses: mshick/add-pr-comment@v1
